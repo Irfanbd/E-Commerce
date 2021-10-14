@@ -11,7 +11,7 @@
 			</div>
 			<div class=" main-content-area">
 				<div class="wrap-address-billing">
-					<h3 class="box-title">Billing Address</h3>
+					<h3 class="box-title">Billing Address:</h3>
 					<form action="#" method="get" name="frm-billing">
 						<p class="row-in-form">
 							<label for="fname">first name<span>*</span></label>
