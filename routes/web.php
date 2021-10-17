@@ -1,8 +1,10 @@
 <?php
+
 use App\Http\livewire\HomeComponent;
 use App\Http\livewire\ShopComponent;
 use App\Http\livewire\CartComponent;
-use App\Http\livewire\CheckoutComponent;
+use App\Http\Livewire\CheckoutComponent;
+use App\Http\livewire\User\UserDashboardComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,10 +33,10 @@ Route::get('/checkout',CheckoutComponent::class);
 //for user or customer
 Route::middleware(['auth:sanctum','verified'])->group(function()
 {
-
+Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
 });
 //For Admin
-Route::middleware(['auth:sanctum','verified'])->group(function()
+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function()
 {
-
+Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 });
